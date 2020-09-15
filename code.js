@@ -1,46 +1,44 @@
-// // Scope and Global Scope
-function init (){
-  var globalVar = 'GlobalVar';
+// Interpret
+// Hoisting
+// variables defined with `var` and function names are declared to the top of the File.
 
-  function parent(){
-    var parentVar = 'parentVar';
-    globalVar = 'newGlobalBal';
-    console.log(globalVar);
-    parentVar = 'new parent var';
-    // console.log(childVar);
+// console.log(a);   // a is not defined
+// var a = 'LM';
+// console.log(a);   // a is not defined
 
-    function childOne(){
-      var childVar = 'childVar'
-      console.log(childVar, parentVar, globalVar);
-      console.log(parentTwoVar, childTwoVar, grandChildVar);
-      function grandChild(){
-        grandChildVar = 'grandChildVar'
-      }
-    }
-    
-    function childTwo(){
-      childTwoVar = 'childTwoVar'
-      childOne();
-    }
-    childTwo()
+// fun();
+
+// function fun (){
+//   console.log('fun was run');
+// }
+
+
+// Accessing Dynamic key values from an object
+// user[key] syntax
+var arr = ['Superman', 'Batman'];
+arr[0]
+
+var user = {
+  address: {
+    street: '123',
+    city: '456',
+  },
+  profile: {
+    userName: 'lm',
+    firstName: 'Liberty',
+    lastName: 'Mutual',
+    phone: 6304567899,
   }
+}
 
-  function parentTwo(){
-    parentTwoVar = 'parentTwoVar';
-    console.log(parentTwoVar);
-  }
+// user.userName
+// user['userName']
+// user[variableName]
 
-  parentTwo()
-  parent()
-  // --------
+function valueGetter(key1, key2){
+  return user[key1][key2]
+  // return user.userName
+}
 
-  // function fun() {
-  //   output = 'value';
-  //   return output = 'some value';
-  // };
-
-  // console.log(fun('Jacob', '50'))
-  // console.log(output);
-  }
-
-init()
+console.log(valueGetter('profile', 'userName'))
+console.log(valueGetter('address', 'street'))
