@@ -1,44 +1,60 @@
-// Interpret
-// Hoisting
-// variables defined with `var` and function names are declared to the top of the File.
+// // IF STATEMENT
+// var age = 35;
 
-// console.log(a);   // a is not defined
-// var a = 'LM';
-// console.log(a);   // a is not defined
-
-// fun();
-
-// function fun (){
-//   console.log('fun was run');
+// if(age < 18){
+//   console.log('You can NOT buy insurance');
+// } else if(
+//   (age >= 18 && age < 21)
+//   ||
+//   (age >= 30 && age < 35)
+// ) {
+//   console.log('You need parental guidance');
+// } else {
+//   console.log('You can buy insurance');
 // }
 
 
-// Accessing Dynamic key values from an object
-// user[key] syntax
-var arr = ['Superman', 'Batman'];
-arr[0]
+// Truthy and Falsey Values
+// if(''){
+//   console.log('if');
+// } else {
+//   console.log('else');
+// }
 
-var user = {
-  address: {
-    street: '123',
-    city: '456',
-  },
-  profile: {
-    userName: 'lm',
-    firstName: 'Liberty',
-    lastName: 'Mutual',
-    phone: 6304567899,
-  }
+// var userList = [];
+
+// if(userList){
+//   console.log('User info')
+// } else {
+//   console.log('Is loading')
+// }
+
+
+// SWITCH STATEMENTS
+// var age = 18;
+// switch (age) {
+//   case 18:
+//     console.log('You need parental guidance');
+//     break;
+//   case 18:
+//     console.log('You can buy insurance');
+//     break;
+//   default:
+//     console.log('We do not have a match for you');
+//     break;
+// }
+
+// Multiple Scenarios
+// switch (true) {
+//   case age > 18 && age <= 21: {
+//   }
+
+var userList = null
+
+var hasUsers = (userList)? 'Hi' : 'Bye';
+
+if(userList){
+  var hasUsers = hi;
+} else {
+  var hasUsers = 'Bye';
 }
-
-// user.userName
-// user['userName']
-// user[variableName]
-
-function valueGetter(key1, key2){
-  return user[key1][key2]
-  // return user.userName
-}
-
-console.log(valueGetter('profile', 'userName'))
-console.log(valueGetter('address', 'street'))
