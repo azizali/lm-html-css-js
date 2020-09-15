@@ -1,100 +1,101 @@
-// Learning Variables
-console.log('Hello JS');
-var name = '';
-var anotherName = 'Long name here';
+// -----------------------------
+// Coersion
+// -----------------------------
+// var merged = false + '7';
+// console.log(merged)
 
-var num = 1;
-var anotherNumber = 2;
-
-var isUserLoggedIn = true;
-
-var sum = num + anotherNumber;
-
-var customers = null;
-
-console.log(sum);
+// var merged2 = 'Liberty Mutual' + ['value', 'value2', 12];
+// console.log(merged2)
 
 
-// Learning Objects
-var company = {
-  name: 'Liberty Mutual',
-  addrress: '123 main st, City, IL 60006',
-  phoneNum: '8001234566',
-  getEmployeeInfo: function(){},
-  locationA: {
-    address: '456 main st',
-    phone: '123456',
-  },
-  locationB: {
-    address: '789 main st',
-    phone: null
-  },
-  officeHours: {
-    sun: {
-      isOpen: false,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-    mon: {
-      isOpen: true,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-    tues: {
-      isOpen: true,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-    wed: {
-      isOpen: true,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-    thu: {
-      isOpen: true,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-    fri: {
-      isOpen: true,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-    sat: {
-      isOpen: false,
-      startTime: "8am",
-      endTime: "5pm"
-    },
-  },
-  employeeCount: 10000,
-  stock: {
-    symbol: 'LM',
-    price: 123,
-    floatingShares: 123456789
-  }
+// -----------------------------
+// Function
+// -----------------------------
+// Create/Declare a function
+// Paramters are also called arguments
+function greet(name, menuNumer) {
+  // here is your code
+  // bunch of code
+  console.log('Hello ' + name);
+
+}
+console.log('Before greet execution')
+
+// execute/run/call the function
+greet('Patrick', 1);
+greet('Mazahir');
+
+var username = 'kellie';
+
+greet(username);
+
+// Example of usering function with optional parameters used
+// function getUserPrevlidges(userId, userEmployeeId){
+
+// }
+
+// getUserPrevlidges(userId)
+// getUserPrevlidges(123, 456)
+
+
+
+function add(a, b){
+  return a + b;
 }
 
-console.log('Phone number', company.phoneNum);
-console.log('stock price',company.stock.price);
-console.log('locationA phone', company.locationA.phone);
-console.log('locationA email', company.locationA.emailAddress);
+function multiply(a, b){
+  console.log(a*b);
+  return a * b;
+}
+
+var addedValue = add(5, 2);
+console.log('addedValue', addedValue);
+
+// Broken out in two steps
+// var multipliedValue = multiply(addedValue, 3);
+// console.log('multipliedValue', multipliedValue);
+
+// Done in one step
+// console.log('multipliedValue', multiply(addedValue, 3));
+
+// console.log('more nesting', multiply(add(5,2), 3));
 
 
 
-console.log('---------------');
-// Learning Arrays
+// Passing function as a parameter
+function subtract(a, b){
+  return a - b;
+}
 
-// Single line code comments
+function divide (a, b){
+  return a / b;
+}
 
-/*
-  Another way to do code commenting
-  Multi-line or single line
-*/
+console.log(
+  subtract(divide(200, 2), 40)
+);
+// ----------
+function showUserProfile(fun, number){
+  var funValue = fun();
+  console.log(funValue, number);
+}
 
-var list = ['A', 'B', 'C'];
-console.log('list', list);
-console.log('List second value', list[1]);
+// Employee login via internet
+showUserProfile(function(){
+  // to a database
+  // check if user is authorized
+  return 123;
+}, 40)
 
-var listRandom = [1, 2, 'C', { key: 'value'}, function(){}, null, undefined];
-console.log('listRandom', listRandom);
+// Employee login via company computer
+showUserProfile(function(){
+  // read info from file
+  return 456;
+}, 40)
 
+function authenticateViaToken (){
+  // do something
+  return 789
+} 
+
+showUserProfile(authenticateViaToken, 40)
