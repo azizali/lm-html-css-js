@@ -1,29 +1,66 @@
-// FOR LOOP
-//    1;    2   ;       4
-// for(var i = 0; i < 100; i++){
-//   console.log(i);     // 3
+//-----------------
+// INTRO TO LET AND CONST
+//-----------------
+// var a = 'LM';
+// let b = 'LM';
+// const c = 'LM';
+
+// console.log(a, b, c);
+// a = 'ML';
+// console.log(a);
+
+// b = 'ML';
+// console.log(b);
+
+// c = 'ML';
+// console.log(c);
+
+//-----------------
+// BLOCK SCOPE EXAMPLE WITH FOR
+//-----------------
+// for(let i = 0; i<10; i++){
+  //   console.log(i);
+  // }
+  // console.log('outside', i);
+  
+//-----------------
+// BLOCK SCOPE EXAMPLE WITH IF
+//-----------------
+// if(true){
+//   let val = 'val'
+//   console.log('Inside If', val);
+// }
+// console.log('Outside If', val);
+
+//-----------------
+// const: Change value vs re-assigning value
+//-----------------
+// const o = {
+//   key: 'value'
 // }
 
-// console.log('line after the loop', i);
+// o.anotherKey = 'anotherValue'
+// o.key = 'new value';
 
-// var arr = ['A', 'B', 'C', 1,,5,5,5,5];
-// for(item in arr){
-//   console.log(arr[item]);
-// }
+// console.log(o);
 
-// WHILE LOOP
-// var i = 0;
-// while(i < 100){
-//   console.log(i);
-//   i++;
-// }
+// // o = {
+// //   key: 'value'
+// // }
 
 
-// DO WHILE LOOP
-var i = 0;
-do {
-  console.log(i)
-  i++;
-} while(i<100)
+// const arr = ['a', 'b', 'c'];
 
+// arr[0] = 'x'
+// arr[2] = 'z';
 
+// console.log(arr);
+
+// ------------
+// Var let and const global scope
+// ------------
+var a = 'LM';
+let b = 'LM';
+const c = 'LM';
+
+window.myValue = 'myValue';
