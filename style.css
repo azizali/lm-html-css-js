@@ -1,0 +1,40 @@
+#some-value{
+  color: cyan;
+}
+
+h2{
+  color: green;
+  background-color: yellow;
+  margin: 0px;
+  padding: 0px;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h3 {
+  color: purple;
+  background-color: pink;
+  margin: 0px;
+}
+
+p {
+  color: green !important;
+  margin: 0px;
+}
+
+.alternate-heading {
+  color: red;
+  background-color: transparent;
+}
+
+/*
+CSS PRIORTITY ORDER
+!important
+inline-css
+id
+later mentioned css property
+*/
+
+* {
+  color: blue;
+}
