@@ -1,40 +1,87 @@
-#some-value{
-  color: cyan;
-}
-
-h2{
-  color: green;
-  background-color: yellow;
-  margin: 0px;
-  padding: 0px;
-  font-size: 28px;
-  font-weight: normal;
-}
-
-h3 {
-  color: purple;
-  background-color: pink;
-  margin: 0px;
-}
-
-p {
-  color: green !important;
-  margin: 0px;
-}
-
-.alternate-heading {
-  color: red;
-  background-color: transparent;
-}
-
-/*
-CSS PRIORTITY ORDER
-!important
-inline-css
-id
-later mentioned css property
-*/
-
 * {
-  color: blue;
+  box-sizing: border-box;
 }
+
+body{
+  font-size: 16px;
+  margin: 0px;
+  background-color: #666666;
+}
+
+main {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+aside {
+  width: 20%;
+  float:left;
+}
+
+article{
+  width: 80%;
+  float:right
+}
+
+header{
+  width: 100%;
+  border: 3px solid #CCCCCC;
+  background-color: rgb(519 220 159);
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+header h1 {
+  /* margin: 0px; */
+  /* margin-top: 0px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 5px; */
+  margin: 0px 0px 10px 5px;
+  float: left;
+}
+
+h1.color-blue{
+  font-weight: 300;
+}
+
+.color-blue{
+  color: blue;
+  font-weight: bold;
+}
+
+header .menu > h1 {
+  font-size: 1.2em;
+}
+
+.inside {
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu{
+  margin-top: 15px;
+  float: right;
+}
+
+
+.box{
+  border: 1px solid black;
+}
+
+
+footer{
+  margin: 50px 20px;
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 0.8em;
+  color: #fff;
+  text-align: center;
+}
+
