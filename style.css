@@ -33,6 +33,24 @@ header{
   box-sizing: border-box;
 }
 
+
+
+h1.color-blue{
+  font-weight: 300;
+}
+.color-blue{
+  color: blue;
+  font-weight: bold;
+}
+header .menu > h1 {
+  font-size: 1.2em;
+}
+.inside {
+  width: 100%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
 header h1 {
   /* margin: 0px; */
   /* margin-top: 0px;
@@ -40,33 +58,23 @@ header h1 {
   margin-right: 0px;
   margin-left: 5px; */
   margin: 0px 0px 10px 5px;
-  float: left;
-}
-
-h1.color-blue{
-  font-weight: 300;
-}
-
-.color-blue{
-  color: blue;
-  font-weight: bold;
-}
-
-header .menu > h1 {
-  font-size: 1.2em;
-}
-
-.inside {
-  width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
+  /* float: left; */
 }
 
 .menu{
   margin-top: 15px;
-  float: right;
+  /* float: right; */
 }
 
+@media (min-width: 500px){
+  .menu{
+    float: right;
+  }
+
+  header h1{
+    float: left;
+  }
+}
 
 .box{
   border: 1px solid black;
@@ -85,3 +93,29 @@ footer{
   text-align: center;
 }
 
+
+@media (max-width: 1000px){
+  header {
+    background-color: green;
+    /* display: none; */
+  }
+}
+
+
+@media (max-width: 499px) {
+  .visible-desktop{
+    display: none;
+  }
+  .visible-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 500px) {
+  .visible-desktop{
+    display: block;
+  }
+  .visible-mobile{
+    display: none;
+  }
+}
